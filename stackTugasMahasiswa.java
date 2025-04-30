@@ -9,7 +9,7 @@ public class stackTugasMahasiswa {
         top = -1;
     }
     public boolean isFull(){
-        if (top == size) {
+        if (top == size - 1) {
             return true;
         } else {
             return false;
@@ -49,8 +49,8 @@ public class stackTugasMahasiswa {
         }
     }
     public void print(){
-        for (int i = 0; i < top; i++) {
-            System.out.println(stack[i].nama + "\t" + stack[i].kelas);
+        for (int i = 0; i <= top; i++) {
+            System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
         }
         System.out.println("");
     }
