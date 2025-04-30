@@ -62,4 +62,11 @@ public class stackTugasMahasiswa {
         }
         System.out.println("");
     }
+    public int jumlah(){
+        int x = 0;
+        for (int i = 0; i <= top; i++) {
+            x++;
+        }
+        return x;
+    }
 }
