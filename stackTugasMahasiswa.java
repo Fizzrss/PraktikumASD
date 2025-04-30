@@ -40,9 +40,17 @@ public class stackTugasMahasiswa {
             return null;
         }
     }
-    public mahasiswa09 peek(){
+    public mahasiswa09 peekAtas(){
         if (!isEmpty()) {
             return stack[top];
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan.");
+            return null;
+        }
+    }
+    public mahasiswa09 peekBawah(){
+        if (!isEmpty()) {
+            return stack[0];
         } else {
             System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan.");
             return null;
