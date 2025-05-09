@@ -34,7 +34,8 @@ public class Antrian {
 
     public void clear() {
         if (!isEmpty()) {
-            front = rear = -1;
+            front = 0;
+            rear = -1;
             size = 0;
             System.out.println("Queue berhasil dikosongkan");
         } else {
