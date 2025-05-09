@@ -18,7 +18,7 @@ public class LayananAkademikSIAKAD {
             System.out.println("8. Tampilkan Antrian Terakhir");
             System.out.println("9. Jumlah KRS Mahasiswa dalam Antrian");
             System.out.println("10. Jumlah KRS Mahasiswa yang sudah diproses");
-            System.out.println("11. Jumlah KRS Mahasiswa yang belum diproses");
+            System.out.println("11. Sisa Kuota Proses oleh DPA");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt(); sc.nextLine();
@@ -70,7 +70,7 @@ public class LayananAkademikSIAKAD {
                     break;
                     
                 case 10:
-                    System.out.println("Jumlah yang Sudah dilayano: " + antrian.getSudahDilayani());
+                    System.out.println("Jumlah yang Sudah dilayani: " + antrian.getSudahDilayani());
                     break;
                     
                 case 11:

@@ -12,6 +12,6 @@ public class Mahasiswa {
         this.kelas = kelas;
     }
     public void tampilData(){
-        System.out.println(nim + " - " + nama + " - " + prodi + " - " + kelas);
+        System.out.printf("%-5s %-10s %-5s %-2s\n", nim, nama, prodi, kelas);
     }
 }
