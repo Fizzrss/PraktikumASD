@@ -16,6 +16,6 @@ public class mahasiswa09 {
         ipk = ip;
     }
     public void tampilInformasi(){
-        System.out.println(nim + "\t" + nama + "\t" + kelas + "\t" + ipk);
+        System.out.println(nama + "\t" + nim + "\t" + kelas + "\t" + ipk);
     }
 }
