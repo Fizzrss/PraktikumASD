@@ -34,9 +34,9 @@ public class DoubleLinkedList09 {
         }
     }
 
-    public void add(String keyNim, Mahasiswa09 data) {
+    public void insertAfter(String keyNim, Mahasiswa09 data) {
         Node09 current = head;
-        
+
         while (current != null && !current.data.nim.equals(keyNim)) {
             current = current.next;
         }
@@ -60,12 +60,16 @@ public class DoubleLinkedList09 {
         }
         System.out.println("Node berhasil disisipkan setelah NIM " + keyNim);
     }
-    
+
     public void print() {
-        Node09 current = head;
-        while (current != null) {
-            current.data.tampil();
-            current = current.next;
+        if (head == null) {
+            System.out.println("Linked list kosong!");
+        } else {
+            Node09 current = head;
+            while (current != null) {
+                current.data.tampil();
+                current = current.next;
+            }
         }
     }
 
