@@ -11,6 +11,6 @@ public class Mahasiswa09 {
         this.ipk = ipk;
     }
     public void tampil(){
-        System.out.println("NIM: " + nim + ", Nama: " + nama + ", Kelas" + kelas + ", IPK: " + ipk);
+        System.out.println("NIM: " + nim + ", Nama: " + nama + ", Kelas: " + kelas + ", IPK: " + ipk);
     }
 }

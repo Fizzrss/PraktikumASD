@@ -61,6 +61,38 @@ public class DoubleLinkedList09 {
         System.out.println("Node berhasil disisipkan setelah NIM " + keyNim);
     }
 
+    public void removeFirst() {
+        if (head == null) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        }
+        Mahasiswa09 dataterhapus = head.data;
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+        System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah ");
+        dataterhapus.tampil();
+    }
+
+    public void removeLast() {
+        if (tail == null) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        }
+        Mahasiswa09 dataterhapus = tail.data;
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+        }
+        System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah ");
+        dataterhapus.tampil();
+    }
+
     public void print() {
         if (head == null) {
             System.out.println("Linked list kosong!");
@@ -73,11 +105,11 @@ public class DoubleLinkedList09 {
         }
     }
 
-    public Mahasiswa09 searchByNim(String nim) {
+    public Node09 searchByNim(String nim) {
         Node09 current = head;
         while (current != null) {
             if (current.data.nim.equalsIgnoreCase(nim)) {
-                return current.data;
+                return current;
             }
             current = current.next;
         }

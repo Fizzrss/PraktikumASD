@@ -30,10 +30,10 @@ public class DLLMain {
                     list.addLast(mhs2);
                     break;
                 case 3:
-                    // list.removeFirst();
+                    list.removeFirst();
                     break;
                 case 4:
-                    // list.removeLast();
+                    list.removeLast();
                     break;
                 case 5:
                     list.print();
@@ -41,11 +41,12 @@ public class DLLMain {
                 case 6:
                     System.out.print("Masukkan NIM yang dicari: ");
                     String nim = scan.nextLine();
-                    Mahasiswa09 cari = list.searchByNim(nim);
-                    if (cari != null) {
-                        System.out.println("Mahasiswa ditemukan: " + cari);
+                    Node09 found = list.searchByNim(nim);
+                    if (found != null) {
+                        System.out.println("Data ditemukan: ");
+                        found.data.tampil();
                     } else {
-                        System.out.println("Mahasiswa tidak ditemukan.");
+                        System.out.println("Data tidak ditemukan.");
                     }
                     break;
                 case 7:
