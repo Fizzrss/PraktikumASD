@@ -1,20 +1,14 @@
 public class queue {
     node front, rear;
     int size;
-    int max;
     
-    public queue(int max) {
+    public queue() {
         this.front = this.rear = null;
         this.size = 0;
-        this.max = max;
     }
     
     public boolean isEmpty() {
         return front == null;
-    }
-
-    public boolean isFull(){
-        return size >= max;
     }
 
     public void clear() {
@@ -55,6 +49,7 @@ public class queue {
             System.out.println("Antrian kosong.");
         } else {
             System.out.println("mahasiswa terdepan:");
+            System.out.println("NIM\t\tNAMA\tKELAS");
             front.data.tampilInformasi();
         }
     }
@@ -64,6 +59,7 @@ public class queue {
             System.out.println("Antrian kosong.");
         } else {
             System.out.println("mahasiswa terakhir:");
+            System.out.println("NIM\t\tNAMA\tKELAS");
             rear.data.tampilInformasi();
         }
     }
@@ -76,7 +72,6 @@ public class queue {
         System.out.println("Daftar mahasiswa dalam Antrian:");
         System.out.println("NIM\t\tNAMA\tKELAS");
         node current = front;
-        int no = 1;
         while (current != null) {
             current.data.tampilInformasi();
             current = current.next;
