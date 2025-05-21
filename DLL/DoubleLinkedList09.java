@@ -163,4 +163,39 @@ public class DoubleLinkedList09 {
         System.out.println("Data setelah NIM " + keyNim + " berhasil dihapus");
         hapus.data.tampil();
     }
+
+    public void remove(int index){
+        if (isEmpty()) {
+            System.out.println("List Kosong");
+            return;
+        }
+        if (index < 0) {
+            System.out.println("Index tidak valid");
+            return;
+        }
+        if (index == 0) {
+            removeFirst();
+            return;
+        }
+
+        Node09 current = head;
+        int indCurrent = 0;
+
+        while (current != null && indCurrent < index) {
+            current = current.next;
+            indCurrent++;
+        }
+        if (current == null) {
+            System.out.println("Index melebihi data");
+        } else {
+            if (current == tail) {
+                removeLast();
+            } else {
+                current.prev.next = current.next;
+                current.next.prev = current.prev;
+                System.out.println("Data pada index " + index + " berhasil dihapus:");
+                current.data.tampil();
+            }
+        }
+    }
 }
