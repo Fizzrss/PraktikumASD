@@ -198,4 +198,35 @@ public class DoubleLinkedList09 {
             }
         }
     }
+
+    Mahasiswa09 getFirst(){
+        if (!isEmpty()) {
+            return head.data;
+        }
+        return null;
+    }
+
+    Mahasiswa09 getLast(){
+        if (!isEmpty()) {
+            return tail.data;
+        }
+        return null;
+    }
+
+    Mahasiswa09 getIndex(int idx){
+        if (idx < 0 || isEmpty()) {
+            return null;
+        }
+        Node09 current = head;
+        int currentIdx = 0;
+
+        while (current != null && currentIdx < idx) {
+            current = current.next;
+            currentIdx++;
+        }
+        if (current != null) {
+            return current.data;
+        }
+        return null;
+    }
 }

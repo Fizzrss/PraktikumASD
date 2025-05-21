@@ -18,6 +18,10 @@ public class DLLMain {
             System.out.println("8. Masukkan data pada index tertentu");
             System.out.println("9. Hapus data setelah NIM tertentu");
             System.out.println("10. Hapus data pada index tertentu");
+            System.out.println("11. Tampil data di awal (head)");
+            System.out.println("12. Tampil data di akhir (tail)");
+            System.out.println("13. Tampil data di index tertentu");
+            System.out.println("14. Tampil Jumlah data");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -75,6 +79,36 @@ public class DLLMain {
                     int idx = scan.nextInt();
                     scan.nextLine();
                     list.remove(idx);
+                    break;
+                case 11:
+                    Mahasiswa09 awal = list.getFirst();
+                    if (awal != null) {
+                        System.out.println("Data yang berada di awal (head): ");
+                        awal.tampil();   
+                    } else {
+                        System.out.println("List Kosong");
+                    }
+                    break;
+                case 12:
+                    Mahasiswa09 akhir = list.getLast();
+                    if (akhir != null) {
+                        System.out.println("Data yang berada di akhir (tail): ");
+                        akhir.tampil();   
+                    } else {
+                        System.out.println("List Kosong");
+                    }
+                    break;
+                case 13:
+                    System.out.print("Masukkan index: ");
+                    int index = scan.nextInt();
+                    scan.nextLine();
+                    Mahasiswa09 mIndex = list.getIndex(index);
+                    if (mIndex != null) {
+                        System.out.println("Data yang berada di index " + index + ": ");
+                        mIndex.tampil();   
+                    } else {
+                        System.out.println("Data pada index tersebut tidak ditemukan");
+                    };
                     break;
                 default:
                     break;
