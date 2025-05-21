@@ -115,4 +115,30 @@ public class DoubleLinkedList09 {
         }
         return null;
     }
+
+    public void add(int index, Mahasiswa09 data){
+        if (index < 0) {
+            System.out.println("Index tidak ditemukan");
+        } else if (index == 0) {
+            addFirst(data);
+        } else {
+            Node09 current = head;
+            int i = 0;
+            while (current != null && i < index - 1) {
+                current = current.next;
+                i++;
+            }
+            if (current == null) {
+                System.out.println("Index melebihi jumlah elemen");
+            } else if (current.next == null) {
+                addLast(data);
+            } else {
+                Node09 newNode = new Node09(data);
+                newNode.next = current.next;
+                newNode.prev = current;
+                current.next.prev = newNode;
+                current.next = newNode;
+            }
+        }
+    }
 }
