@@ -141,4 +141,26 @@ public class DoubleLinkedList09 {
             }
         }
     }
+
+    public void removeAfter(String keyNim){
+        Node09 current = head;
+        while (current != null && !current.data.nim.equals(keyNim)) {
+            current = current.next;
+        }
+        if (current == null || current.next == null) {
+            System.out.println("List Kosong. Tidak ada data yang dapat dihapus");
+            return;
+        }
+
+        Node09 hapus = current.next;
+        current.next = hapus.next;
+
+        if (hapus.next != null) {
+            hapus.next.prev = current;
+        } else {
+            tail = current;
+        }
+        System.out.println("Data setelah NIM " + keyNim + " berhasil dihapus");
+        hapus.data.tampil();
+    }
 }
