@@ -110,6 +110,9 @@ public class DLLMain {
                         System.out.println("Data pada index tersebut tidak ditemukan");
                     };
                     break;
+                case 14:
+                    System.out.println("Jumlah data Linked List: " + list.getSize());
+                    break;
                 default:
                     break;
             }

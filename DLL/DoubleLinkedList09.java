@@ -229,4 +229,14 @@ public class DoubleLinkedList09 {
         }
         return null;
     }
+
+    public int getSize(){
+        int jumlah = 0;
+        Node09 current = head;
+        while (current != null) {
+            jumlah++;
+            current = current.next;
+        }
+        return jumlah;
+    }
 }
