@@ -26,7 +26,6 @@ public class queueMain {
                     System.out.println("Antrian " + (q.isEmpty()?  "kosong" : "Tidak kosong"));
                     break;
                 case 2:
-                    System.out.println("Mengosongkan Antrian");
                     q.clear();
                     break;
                 case 3:

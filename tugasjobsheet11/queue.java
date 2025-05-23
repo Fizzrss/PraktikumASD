@@ -12,9 +12,14 @@ public class queue {
     }
 
     public void clear() {
-        front = rear = null;
-        size = 0;
-        System.out.println("Antrian dikosongkan.");
+        if (isEmpty()) {
+            System.out.println("Tidak dapat mengosongkan antrian. Antrian masih kosong");
+        } else {
+            front = rear = null;
+            size = 0;
+            System.out.println("Mengosongkan Antrian");
+            System.out.println("Antrian dikosongkan.");
+        }
     }
 
     public void tambahAntrian(mahasiswa mhs) {
