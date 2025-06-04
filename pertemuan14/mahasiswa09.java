@@ -8,12 +8,13 @@ public class mahasiswa09 {
     public mahasiswa09(){
     }
 
-    public mahasiswa09(String nm, String name, String kls, double ip){
-        nim = nm;
-        nama = name;
-        kelas = kls;
-        ipk = ip;
+    public mahasiswa09(String nim, String nama, String kelas, double ipk){
+        this.nim = nim;
+        this.nama = nama;
+        this.kelas = kelas;
+        this.ipk = ipk;
     }
+    
     public void tampilInformasi(){
         System.out.println("NIM: "+this.nim+ " " + 
         "Nama: " + this.nama + " " +
