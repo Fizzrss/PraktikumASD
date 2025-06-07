@@ -34,5 +34,14 @@ public class binaryTreeMain09 {
         bst.delete(3.57);
         System.out.println("\nDaftar semua mahasiswa setelah penghapusan 1 mahasiswa (in order traversal):");
         bst.tranverseInOrder(bst.root);
+
+        bst.addrekrusif(new mahasiswa09("244107060", "Diyah", "B", 3.95));
+        System.out.println("Daftar mahasiswa menggunakan stelah penambahan rekrusif");
+        System.out.println("InOrder Traversal:");
+        bst.tranverseInOrder(bst.root);
+        System.out.println("\nPreOrder Traversal:");
+        bst.tranversePreOrder(bst.root);
+        System.out.println("\nPostOrder Traversal:");
+        bst.tranversePostOrder(bst.root);
     }
 }

@@ -162,5 +162,21 @@ public class binaryTree09 {
             }
         }
     }
+    
+    node09 addrekrusifBantu(node09 current, mahasiswa09 data){
+        if (current == null) {
+            return new node09(data);
+        }
+        if (data.ipk < current.mahasiswa.ipk) {
+            current.left = addrekrusifBantu(current.left, data);
+        } else {
+            current.right = addrekrusifBantu(current.right, data);
+        }
 
+        return current;
+    }
+
+    public void addrekrusif(mahasiswa09 data){
+        root = addrekrusifBantu(root, data);        
+    }
 }
