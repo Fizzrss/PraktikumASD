@@ -48,5 +48,8 @@ public class binaryTreeMain09 {
         bst.cariMinIpk();
         System.out.println("\nMahasiswa dengan IPK Maksimum");
         bst.cariMaxIpk();
+
+        System.out.println("\nCari IPK di atas data tertentu");
+        bst.tampilMahasiswaIpkDiatas(3.50);
     }
 }

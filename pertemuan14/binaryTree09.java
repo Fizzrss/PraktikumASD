@@ -204,4 +204,22 @@ public class binaryTree09 {
         System.out.println("Data mahasiswa dengan IPK Maximum");
         current.mahasiswa.tampilInformasi();
     }
+
+    void tampilMahasiswaIpkDiatasBantu(node09 node, double ipkBatas){
+        if (node != null) {
+            tampilMahasiswaIpkDiatasBantu(node.left, ipkBatas);
+            if (node.mahasiswa.ipk > ipkBatas) {
+                node.mahasiswa.tampilInformasi();;
+            }
+            tampilMahasiswaIpkDiatasBantu(node.right, ipkBatas);
+        }
+    }
+
+    void tampilMahasiswaIpkDiatas(double ipkBatas){
+        if (isEmpty()) {
+            System.out.println("Binary tree kosong");
+        }
+        System.out.println("Mahasiswa dengan IPK di atas " + ipkBatas + ": ");
+        tampilMahasiswaIpkDiatasBantu(root, ipkBatas);
+    }
 }
