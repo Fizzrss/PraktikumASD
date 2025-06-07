@@ -179,4 +179,29 @@ public class binaryTree09 {
     public void addrekrusif(mahasiswa09 data){
         root = addrekrusifBantu(root, data);        
     }
+
+    void cariMinIpk(){
+        if (isEmpty()) {
+            System.out.println("Binary tree kosong");
+            return;
+        }
+        node09 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        System.out.println("Data mahasiswa dengan IPK minimum");
+        current.mahasiswa.tampilInformasi();
+    }
+
+    void cariMaxIpk(){
+        if (isEmpty()) {
+            System.out.println("Binary tree kosong");
+        }
+        node09 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        System.out.println("Data mahasiswa dengan IPK Maximum");
+        current.mahasiswa.tampilInformasi();
+    }
 }

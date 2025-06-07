@@ -12,11 +12,11 @@ public class binaryTreeMain09 {
 
         System.out.println("\nPencarian data mahasiswa: ");
         System.out.print("Cari mahasiswa dengan ipk: 3.54 : ");
-        String hasilCari = bst.find(3.54)? "Ditemukan":"Tidak ditemukan";
+        String hasilCari = bst.find(3.54) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
-        
+
         System.out.print("Cari mahasiswa dengan ipk: 3.22 : ");
-        hasilCari = bst.find(3.22)? "Ditemukan":"Tidak ditemukan";
+        hasilCari = bst.find(3.22) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
 
         bst.add(new mahasiswa09("244160131", "Devi", "A", 3.72));
@@ -43,5 +43,10 @@ public class binaryTreeMain09 {
         bst.tranversePreOrder(bst.root);
         System.out.println("\nPostOrder Traversal:");
         bst.tranversePostOrder(bst.root);
+
+        System.out.println("\nMahasiswa dengan IPK Maksimum");
+        bst.cariMinIpk();
+        System.out.println("\nMahasiswa dengan IPK Maksimum");
+        bst.cariMaxIpk();
     }
 }
