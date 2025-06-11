@@ -26,5 +26,10 @@ public class stackDemo {
         }
 
         System.out.println(books);
+
+        int posisi1 = books.search(book1);
+        System.out.println("Posisi book1 dari atas stack: " + posisi1);
+        int posisi2 = books.search(book2);
+        System.out.println("Posisi book2 dari atas stack: " + posisi2);
     }
 }
